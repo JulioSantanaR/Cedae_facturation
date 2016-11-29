@@ -22,3 +22,8 @@ C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Tools\bin\Debug\RODHE.T
 C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Tools\obj\Debug\RODHE.Tools.csprojResolveAssemblyReference.cache
 C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Tools\obj\Debug\RODHE.Tools.dll
 C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Tools\obj\Debug\RODHE.Tools.pdb
+C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Tools\bin\Debug\RODHE.Tools.dll
+C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Tools\bin\Debug\RODHE.Tools.pdb
+C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Tools\obj\Debug\RODHE.Tools.csprojResolveAssemblyReference.cache
+C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Tools\obj\Debug\RODHE.Tools.dll
+C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Tools\obj\Debug\RODHE.Tools.pdb
