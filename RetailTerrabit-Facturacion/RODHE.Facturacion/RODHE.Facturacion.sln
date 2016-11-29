@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RODHE.Facturacion", "SCFacturacion\RODHE.Facturacion.csproj", "{A81BD644-E11C-4BF1-B957-CA2E312B77AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RODHE.Facturacion.BLL", "SCFacturacion.BLL\RODHE.Facturacion.BLL.csproj", "{FA2FBD12-177E-4BD2-B2AF-9A7A50E7EA08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RODHE.Facturacion.DAL", "SCFacturacion.DAL\RODHE.Facturacion.DAL.csproj", "{D728E4EE-549A-439B-9D57-05958A93F392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RODHE.Facturacion.OBJ", "SCFacturacion.OBJ\RODHE.Facturacion.OBJ.csproj", "{09D48C82-93D0-4485-BAA9-915946C7819A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RODHE.Tools", "..\RODHE.Tools\RODHE.Tools.csproj", "{5502A72D-82E5-4748-918F-5960526217FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RODHE.Conexion", "..\RODHE.Conexion\RODHE.Conexion.csproj", "{30BEB0DF-BD94-43F7-A7EB-B13EABA6B48F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A81BD644-E11C-4BF1-B957-CA2E312B77AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A81BD644-E11C-4BF1-B957-CA2E312B77AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A81BD644-E11C-4BF1-B957-CA2E312B77AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A81BD644-E11C-4BF1-B957-CA2E312B77AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA2FBD12-177E-4BD2-B2AF-9A7A50E7EA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2FBD12-177E-4BD2-B2AF-9A7A50E7EA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2FBD12-177E-4BD2-B2AF-9A7A50E7EA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2FBD12-177E-4BD2-B2AF-9A7A50E7EA08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D728E4EE-549A-439B-9D57-05958A93F392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D728E4EE-549A-439B-9D57-05958A93F392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D728E4EE-549A-439B-9D57-05958A93F392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D728E4EE-549A-439B-9D57-05958A93F392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D48C82-93D0-4485-BAA9-915946C7819A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D48C82-93D0-4485-BAA9-915946C7819A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D48C82-93D0-4485-BAA9-915946C7819A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D48C82-93D0-4485-BAA9-915946C7819A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5502A72D-82E5-4748-918F-5960526217FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5502A72D-82E5-4748-918F-5960526217FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5502A72D-82E5-4748-918F-5960526217FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5502A72D-82E5-4748-918F-5960526217FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BEB0DF-BD94-43F7-A7EB-B13EABA6B48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BEB0DF-BD94-43F7-A7EB-B13EABA6B48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BEB0DF-BD94-43F7-A7EB-B13EABA6B48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BEB0DF-BD94-43F7-A7EB-B13EABA6B48F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

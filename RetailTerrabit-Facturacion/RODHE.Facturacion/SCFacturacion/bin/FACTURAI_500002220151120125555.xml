@@ -1,0 +1,34 @@
+<factura>
+  <comprobante>
+    <cliente>5000022</cliente>
+    <transaccion>ZS30</transaccion>
+    <numtck>1</numtck>
+    <fecha>20.11.2015</fecha>
+    <receptor>
+      <rfc>RELJ880130Q75</rfc>
+      <razonsocial>JESUS EDUARDO RECODER LUNA</razonsocial>
+      <direccion>gral. div. thomas sh|13|Atlanta|Cuautitlan Izcalli|MEX|MX|54740</direccion>
+      <email>Jrecoder.luna@hotmail.com</email>
+    </receptor>
+    <items>
+      <item>
+        <material>52039</material>
+        <cantidad>1</cantidad>
+        <unidad>PZA</unidad>
+        <total>89.66</total>
+      </item>
+      <item>
+        <material>52003</material>
+        <cantidad>1</cantidad>
+        <unidad>PZA</unidad>
+        <total>109</total>
+      </item>
+      <item>
+        <material>52001</material>
+        <cantidad>1</cantidad>
+        <unidad>PZA</unidad>
+        <total>5.56</total>
+      </item>
+    </items>
+  </comprobante>
+</factura>

@@ -1,0 +1,11 @@
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.dll
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.pdb
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.dll
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.pdb
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.dll
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.pdb
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.dll
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.pdb
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.dll.CodeAnalysisLog.xml
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.dll.lastcodeanalysissucceeded
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.csprojResolveAssemblyReference.cache

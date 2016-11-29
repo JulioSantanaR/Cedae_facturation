@@ -1,0 +1,16 @@
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\obj\Release\RODHE.Facturacion.BLL.csprojResolveAssemblyReference.cache
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\obj\Release\SCFacturacion.BLL.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\obj\Release\SCFacturacion.BLL.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\SCFacturacion.BLL.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\SCFacturacion.BLL.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\RODHE.Tools.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\SCFacturacion.DAL.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\SCFacturacion.OBJ.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\Excel.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\RODHE.Conexion.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\ICSharpCode.SharpZipLib.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\MySql.Data.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\RODHE.Tools.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\SCFacturacion.DAL.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\SCFacturacion.OBJ.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.BLL\bin\Release\RODHE.Conexion.pdb

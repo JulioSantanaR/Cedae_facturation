@@ -1,0 +1,9 @@
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Release\SCFacturacion.OBJ.dll
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Release\SCFacturacion.OBJ.pdb
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Release\SCFacturacion.OBJ.dll
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Release\SCFacturacion.OBJ.pdb
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Release\SCFacturacion.OBJ.dll
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\bin\Release\SCFacturacion.OBJ.pdb
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Release\SCFacturacion.OBJ.csprojResolveAssemblyReference.cache
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Release\SCFacturacion.OBJ.dll
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.OBJ\obj\Release\SCFacturacion.OBJ.pdb

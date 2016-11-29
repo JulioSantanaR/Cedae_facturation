@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A81BD644-E11C-4BF1-B957-CA2E312B77AE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCFacturacion</RootNamespace>
+    <AssemblyName>SCFacturacion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="main\assets\data\bs-table-simple.json" />
+    <Content Include="main\assets\data\bs-table.json" />
+    <Content Include="main\assets\img\logocedae.png" />
+    <Content Include="main\assets\img\TicketCe.JPG" />
+    <Content Include="main\assets\js\ajaxdownloader.js" />
+    <Content Include="main\assets\js\ValidationForm.js" />
+    <Content Include="main\assets\plugins\blockUI\block.css" />
+    <Content Include="main\assets\plugins\blockUI\jquery.blockUI.js" />
+    <Content Include="main\assets\plugins\bootstrap-tagsinput\bootstrap-tagsinput.css" />
+    <Content Include="main\assets\plugins\bootstrap-tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Include="main\assets\plugins\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="main\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="main\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="main\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.woff" />
+    <Content Include="main\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.woff2" />
+    <Content Include="main\assets\plugins\fooTable\css\fonts\footable.eot" />
+    <Content Include="main\assets\plugins\fooTable\css\fonts\footable.ttf" />
+    <Content Include="main\assets\plugins\fooTable\css\fonts\footable.woff" />
+    <Content Include="main\assets\plugins\fooTable\css\fonts\footabled41d.eot" />
+    <Content Include="main\Download.aspx" />
+    <Content Include="main\assets\js\jQueryFile.js" />
+    <Content Include="main\masterPage.Master" />
+    <None Include="Properties\PublishProfiles\Facturacion.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main\assets\css\bootstrap.min.css" />
+    <Content Include="main\assets\css\rodhe.css" />
+    <Content Include="main\assets\css\nifty.min.css" />
+    <Content Include="main\assets\css\themes\type-a\theme-rodhe.css" />
+    <Content Include="main\assets\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="main\assets\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="main\assets\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="main\assets\fonts\glyphicons-halflings-regular-5.html" />
+    <Content Include="main\assets\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="main\assets\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="main\assets\js\bootstrap.min.js" />
+    <Content Include="main\assets\js\demo\bg-images.js" />
+    <Content Include="main\assets\js\demo\charts.js" />
+    <Content Include="main\assets\js\demo\dashboard.js" />
+    <Content Include="main\assets\js\demo\form-component.js" />
+    <Content Include="main\assets\js\demo\form-validation.js" />
+    <Content Include="main\assets\js\demo\form-wizard.js" />
+    <Content Include="main\assets\js\demo\layouts.js" />
+    <Content Include="main\assets\js\demo\mail.js" />
+    <Content Include="main\assets\js\demo\misc-fullcalendar.js" />
+    <Content Include="main\assets\js\demo\misc-gmaps.js" />
+    <Content Include="main\assets\js\demo\nifty-demo.min.js" />
+    <Content Include="main\assets\js\demo\tables-bs-table.js" />
+    <Content Include="main\assets\js\demo\tables-datatables.js" />
+    <Content Include="main\assets\js\demo\tables-footable.js" />
+    <Content Include="main\assets\js\demo\ui-alerts.js" />
+    <Content Include="main\assets\js\demo\ui-buttons.js" />
+    <Content Include="main\assets\js\demo\ui-modals.js" />
+    <Content Include="main\assets\js\demo\ui-panels.js" />
+    <Content Include="main\assets\js\demo\widgets.js" />
+    <Content Include="main\assets\js\jquery-2.1.1.min.js" />
+    <Content Include="main\assets\js\nifty.min.js" />
+    <Content Include="main\assets\plugins\animate-css\animate.min.css" />
+    <Content Include="main\assets\plugins\bootbox\bootbox.min.js" />
+    <Content Include="main\assets\plugins\bootstrap-datepicker\bootstrap-datepicker.css" />
+    <Content Include="main\assets\plugins\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="main\assets\plugins\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="main\assets\plugins\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="main\assets\plugins\bootstrap-timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="main\assets\plugins\bootstrap-timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="main\assets\plugins\bootstrap-validator\bootstrapValidator.min.css" />
+    <Content Include="main\assets\plugins\bootstrap-validator\bootstrapValidator.min.js" />
+    <Content Include="main\assets\plugins\bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="main\assets\plugins\chosen\chosen-sprite%402x.html" />
+    <Content Include="main\assets\plugins\chosen\chosen-sprite.html" />
+    <Content Include="main\assets\plugins\chosen\chosen.jquery.min.js" />
+    <Content Include="main\assets\plugins\chosen\chosen.min.css" />
+    <Content Include="main\assets\plugins\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="main\assets\plugins\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="main\assets\plugins\datatables\media\css\dataTables.bootstrap.css" />
+    <Content Include="main\assets\plugins\datatables\media\images\sort_asc.png" />
+    <Content Include="main\assets\plugins\datatables\media\images\sort_asc_disabled.png" />
+    <Content Include="main\assets\plugins\datatables\media\images\sort_both.png" />
+    <Content Include="main\assets\plugins\datatables\media\images\sort_desc.png" />
+    <Content Include="main\assets\plugins\datatables\media\images\sort_desc_disabled.png" />
+    <Content Include="main\assets\plugins\datatables\media\js\dataTables.bootstrap.js" />
+    <Content Include="main\assets\plugins\datatables\media\js\jquery.dataTables.js" />
+    <Content Include="main\assets\plugins\dropzone\dropzone.css" />
+    <Content Include="main\assets\plugins\dropzone\dropzone.min.js" />
+    <Content Include="main\assets\plugins\easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="main\assets\plugins\fast-click\fastclick.min.js" />
+    <Content Include="main\assets\plugins\flot-charts\jquery.flot.min.js" />
+    <Content Include="main\assets\plugins\flot-charts\jquery.flot.pie.min.js" />
+    <Content Include="main\assets\plugins\flot-charts\jquery.flot.resize.min.js" />
+    <Content Include="main\assets\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="main\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="main\assets\plugins\font-google\google.css" />
+    <Content Include="main\assets\plugins\fooTable\css\fonts\footable.svg" />
+    <Content Include="main\assets\plugins\fooTable\css\footable.core.css" />
+    <Content Include="main\assets\plugins\fooTable\dist\footable.all.min.js" />
+    <Content Include="main\assets\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="main\assets\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="main\assets\plugins\fullcalendar\lib\jquery-ui.custom.min.js" />
+    <Content Include="main\assets\plugins\fullcalendar\lib\moment.min.js" />
+    <Content Include="main\assets\plugins\gauge-js\gauge.min.js" />
+    <Content Include="main\assets\plugins\gmaps\gmaps.js" />
+    <Content Include="main\assets\plugins\images\spritemap%402x.html" />
+    <Content Include="main\assets\plugins\images\spritemap.html" />
+    <Content Include="main\assets\plugins\masked-input\jquery.maskedinput.min.js" />
+    <Content Include="main\assets\plugins\morris-js\morris.min.css" />
+    <Content Include="main\assets\plugins\morris-js\morris.min.js" />
+    <Content Include="main\assets\plugins\morris-js\raphael-js\raphael.min.js" />
+    <Content Include="main\assets\plugins\noUiSlider\jquery.nouislider.all.min.js" />
+    <Content Include="main\assets\plugins\noUiSlider\jquery.nouislider.min.css" />
+    <Content Include="main\assets\plugins\noUiSlider\jquery.nouislider.pips.min.css" />
+    <Content Include="main\assets\plugins\pace\pace.min.css" />
+    <Content Include="main\assets\plugins\pace\pace.min.js" />
+    <Content Include="main\assets\plugins\skycons\skycons.min.js" />
+    <Content Include="main\assets\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="main\assets\plugins\summernote\summernote.min.css" />
+    <Content Include="main\assets\plugins\summernote\summernote.min.js" />
+    <Content Include="main\assets\plugins\switchery\switchery.min.css" />
+    <Content Include="main\assets\plugins\switchery\switchery.min.js" />
+    <Content Include="main\assets\plugins\x-editable\css\bootstrap-editable.css" />
+    <Content Include="main\assets\plugins\x-editable\img\clear.png" />
+    <Content Include="main\assets\plugins\x-editable\img\loading.gif" />
+    <Content Include="main\assets\plugins\x-editable\js\bootstrap-editable.min.js" />
+    <Content Include="main\index.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="main\Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main\Download.aspx.designer.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main\masterPage.Master.cs">
+      <DependentUpon>masterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main\masterPage.Master.designer.cs">
+      <DependentUpon>masterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SCFacturacion.BLL\RODHE.Facturacion.BLL.csproj">
+      <Project>{fa2fbd12-177e-4bd2-b2af-9a7a50e7ea08}</Project>
+      <Name>RODHE.Facturacion.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCFacturacion.OBJ\RODHE.Facturacion.OBJ.csproj">
+      <Project>{09d48c82-93d0-4485-baa9-915946c7819a}</Project>
+      <Name>RODHE.Facturacion.OBJ</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

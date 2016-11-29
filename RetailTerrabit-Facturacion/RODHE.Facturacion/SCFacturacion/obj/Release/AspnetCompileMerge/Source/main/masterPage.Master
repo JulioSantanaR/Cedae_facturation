@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="SCFacturacion.main.masterPage" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Facturación</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--stylesheet-->
+    <link href="assets/plugins/font-google/google.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/staclara.css" rel="stylesheet" />
+    <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/css/themes/type-a/theme-staclara.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace.min.css" rel="stylesheet" />
+    <link href="assets/plugins/blockUI/block.css" rel="stylesheet" />
+    
+    <asp:ContentPlaceHolder ID="ContentPlaceHeader" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="container" class="effect mainnav-lg">
+        <!--navbar-->
+        <header id="navbar" style="height: 60px;">
+            <div id="navbar-container" style="height: 60px;" class="boxed">
+                <!--Brand-->
+                <!--================================-->
+                <div class="navbar-header" style="height: 60px; background: #7d0040;">
+                    <a href="#" style="height: 60px; background: #7d0040;" class="navbar-brand">
+                        <img src="assets/img/logo.png" alt="Santa Clara" style="height: 60px; float: left;">
+                        <div class="brand-title" style="height: 60px;">
+                            <span style="height: 60px;" class="brand-text">Santa Clara</span>
+                        </div>
+                    </a>
+                </div>
+                <!--================================-->
+                <!--End Brand-->
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix">
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content">
+
+                <!--Page Title-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">Blank page</h1>
+                </div>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End page title-->
+
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceBody" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--===================================================-->
+                <!--End page content-->
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+        </div>
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <br />
+        <footer id="footer" style="padding-left: 0px;">
+            <div class="hide-fixed pull-right pad-rgt" runat="server" id="version"></div>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <p class="pad-lft">&#0169;  <%=DateTime.Now.Year.ToString() %> Santa Clara Mercantil de Pachuca, S. de R.L. de C.V.</p>
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+        <!-- SCROLL TOP BUTTON -->
+        <!--===================================================-->
+        <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+        <!--===================================================-->
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/fast-click/fastclick.min.js"></script>
+    <script src="assets/js/nifty.min.js"></script>
+    <script src="assets/plugins/switchery/switchery.min.js"></script>
+    <script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
+    <script src="assets/plugins/bootbox/bootbox.min.js"></script>
+    <script src="assets/plugins/blockUI/jquery.blockUI.js"></script>
+    <script type="text/javascript">
+        function Block() {
+
+            $.blockUI({
+                message: 'Espere un momento...',
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#000',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    opacity: .5,
+                    color: '#fff'                  
+                }
+            });           
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="ContentPlaceScript" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
+
+
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="timbrarv1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Seguridad" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comprobante" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="Emisor" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="Receptor" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="Conceptos" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImpuestosTrasladados" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImpuestosRetenidos" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="timbrarv1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timbrarv1Result" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="timbrarv1SoapIn">
+    <wsdl:part name="parameters" element="tns:timbrarv1" />
+  </wsdl:message>
+  <wsdl:message name="timbrarv1SoapOut">
+    <wsdl:part name="parameters" element="tns:timbrarv1Response" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceCFDISoap">
+    <wsdl:operation name="timbrarv1">
+      <wsdl:input message="tns:timbrarv1SoapIn" />
+      <wsdl:output message="tns:timbrarv1SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceCFDISoap" type="tns:WebServiceCFDISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="timbrarv1">
+      <soap:operation soapAction="http://tempuri.org/timbrarv1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceCFDISoap12" type="tns:WebServiceCFDISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="timbrarv1">
+      <soap12:operation soapAction="http://tempuri.org/timbrarv1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceCFDI">
+    <wsdl:port name="WebServiceCFDISoap" binding="tns:WebServiceCFDISoap">
+      <soap:address location="http://74.50.117.161:100/WebServiceCFDI.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceCFDISoap12" binding="tns:WebServiceCFDISoap12">
+      <soap12:address location="http://74.50.117.161:100/WebServiceCFDI.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

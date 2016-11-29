@@ -1,0 +1,15 @@
+E:\Proyectos\TerraBit\Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.dll
+E:\Proyectos\TerraBit\Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.pdb
+E:\Proyectos\TerraBit\Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\RODHE.Facturacion.OBJ.csprojResolveAssemblyReference.cache
+E:\Proyectos\TerraBit\Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.dll
+E:\Proyectos\TerraBit\Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\RODHE.Facturacion.OBJ.csprojResolveAssemblyReference.cache
+C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.dll
+C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\bin\Debug\SCFacturacion.OBJ.pdb
+C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.dll
+C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\SCFacturacion.OBJ.pdb
+C:\Proyectos\2016\CEDAE\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.OBJ\obj\Debug\RODHE.Facturacion.OBJ.csprojResolveAssemblyReference.cache

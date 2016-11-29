@@ -1,0 +1,6 @@
+E:\Proyectos\Rodhe\RODHE.Conexion\bin\Release\RODHE.Conexion.dll.config
+E:\Proyectos\Rodhe\RODHE.Conexion\bin\Release\RODHE.Conexion.dll
+E:\Proyectos\Rodhe\RODHE.Conexion\bin\Release\RODHE.Conexion.pdb
+E:\Proyectos\Rodhe\RODHE.Conexion\obj\Release\RODHE.Conexion.csprojResolveAssemblyReference.cache
+E:\Proyectos\Rodhe\RODHE.Conexion\obj\Release\RODHE.Conexion.dll
+E:\Proyectos\Rodhe\RODHE.Conexion\obj\Release\RODHE.Conexion.pdb

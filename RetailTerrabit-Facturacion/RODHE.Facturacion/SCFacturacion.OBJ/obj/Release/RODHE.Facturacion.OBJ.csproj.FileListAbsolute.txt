@@ -1,0 +1,5 @@
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\bin\Release\SCFacturacion.OBJ.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\bin\Release\SCFacturacion.OBJ.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\obj\Release\RODHE.Facturacion.OBJ.csprojResolveAssemblyReference.cache
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\obj\Release\SCFacturacion.OBJ.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.OBJ\obj\Release\SCFacturacion.OBJ.pdb

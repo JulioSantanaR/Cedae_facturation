@@ -1,0 +1,5 @@
+E:\Proyectos\Rodhe\RODHE.Tools\obj\Release\RODHE.Tools.csprojResolveAssemblyReference.cache
+E:\Proyectos\Rodhe\RODHE.Tools\bin\Release\RODHE.Tools.dll
+E:\Proyectos\Rodhe\RODHE.Tools\bin\Release\RODHE.Tools.pdb
+E:\Proyectos\Rodhe\RODHE.Tools\obj\Release\RODHE.Tools.dll
+E:\Proyectos\Rodhe\RODHE.Tools\obj\Release\RODHE.Tools.pdb

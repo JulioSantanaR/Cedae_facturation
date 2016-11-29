@@ -1,0 +1,14 @@
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\bin\Release\SCFacturacion.DAL.dll
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\bin\Release\SCFacturacion.DAL.pdb
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\bin\Release\JDVConnectionSQL.dll
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\bin\Release\JDVConnectionSQL.pdb
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\obj\Release\SCFacturacion.DAL.csprojResolveAssemblyReference.cache
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\obj\Release\SCFacturacion.DAL.dll
+E:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\obj\Release\SCFacturacion.DAL.pdb
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\bin\Release\SCFacturacion.DAL.dll
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\bin\Release\SCFacturacion.DAL.pdb
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\bin\Release\JDVConnectionSQL.dll
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\bin\Release\JDVConnectionSQL.pdb
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\obj\Release\SCFacturacion.DAL.csprojResolveAssemblyReference.cache
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\obj\Release\SCFacturacion.DAL.dll
+D:\Proyectos\JesusRecoder\SCFacturacion\SCFacturacion.DAL\obj\Release\SCFacturacion.DAL.pdb

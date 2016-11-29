@@ -1,0 +1,8 @@
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.DAL\bin\Release\SCFacturacion.DAL.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.DAL\bin\Release\SCFacturacion.DAL.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.DAL\bin\Release\RODHE.Conexion.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.DAL\bin\Release\MySql.Data.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.DAL\bin\Release\RODHE.Conexion.pdb
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.DAL\obj\Release\RODHE.Facturacion.DAL.csprojResolveAssemblyReference.cache
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.DAL\obj\Release\SCFacturacion.DAL.dll
+E:\Proyectos\Rodhe\RODHE.Facturacion\SCFacturacion.DAL\obj\Release\SCFacturacion.DAL.pdb
