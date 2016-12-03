@@ -410,6 +410,11 @@
 		<strong>Mensaje!</strong> Este ticket no fue encontrado. Intenta con otro.
     </div>
 </div>
+<div id="failedTicket" style="display: none;" class="demo-preview-alert">
+    <div class="alert alert-success media fade in">
+		<strong>Mensaje!</strong> No se puede realizar la facturación ya que la fecha del ticket tiene más de 30 días.
+    </div>
+</div>
 <!--===================================================-->
 <!-- End Alert -->
 

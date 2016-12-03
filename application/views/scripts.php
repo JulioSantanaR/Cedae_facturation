@@ -27,7 +27,7 @@
 			nextSelector: '.next',
 			previousSelector: '.previous',
 			onTabClick: function (tab, navigation, index) {
-				return true;
+				return false;
 			},
 			onInit: function () {
 				$('#facturacion-wz').find('.finish').hide().prop('disabled', true);
@@ -67,7 +67,7 @@
 						case 1:
 							var ticketsParameter = ticketsTodos + "";
 							parameters = { rfc: $("#rfc").val(), tickets: ticketsParameter };
-							newAjaxAsync('<%= ResolveUrl("~/main/index.aspx/GetTicket") %>', parameters, textChange, modalText, 1, 'facturacion-wz');
+							newAjaxAsync('<?php echo base_url("index.php/Client/GetTicketClient"); ?>', parameters, textChange, modalText, 1, 'facturacion-wz');
 						break;
 						case 2:
 							messagebool = true;
@@ -179,9 +179,13 @@
 			});
 		}
 
-		function textChange(obj) {
-			try {
+		//Llenar los datos del cliente con el objeto recuperado
+		function textChange(obj) 
+		{
+			try 
+			{
 				$("#rfc2").val($.trim($("#rfc").val().toUpperCase()));
+				/*
                 $("#razon").val($.trim(obj.Object[0].client.razonsocial));
                 $("#pais").val($.trim("México"));
                 if (obj.Object[0].client.estado == null)
@@ -202,6 +206,7 @@
                 }
 				$("#totalfact").html("$" + ($.trim(totalsum.toFixed(2))));
 				folio = obj.ID;
+				*/
 				return true;
 			}
 			catch (e) {
@@ -239,11 +244,12 @@
 			return true;
 		}
 
+		//Muestra la imagen del ticket de ejemplo para facturar
 		$("#modalTicketHelp").click(function ()
 		{
 			bootbox.dialog({
 				title: "Datos de Ticket",
-				message: '<center><img src="<%= ResolveUrl("~/main/assets/img/TicketCe.jpg")%>" width="95%"/></center>'
+				message: '<center><img src="public/assets/img/TicketCe.jpg" width="95%"/></center>'
 			});
 		});
 	});
@@ -320,10 +326,14 @@
                                 $("#monto").val('');
 							}
                         }
-                        else
+                        else if(obj.status == "Failed")
                         {
-							alertTicketNoEncontrado();
+							alertFailedTicket();
                         }
+						else
+						{
+							alertTicketNoEncontrado();
+						}
 					}
 				});
             }
@@ -418,6 +428,17 @@
 	function alertTicketNoEncontrado()
 	{
 		alertContent = $('#ticketNoEncontrado').find('.alert').html();
+		contentHTML = alertContent;
+		$.niftyNoty({
+			type: "danger",
+			container: 'floating',
+			html: contentHTML,
+			timer: true ? 3000 : 0
+		});
+	}
+	function alertFailedTicket()
+	{
+		alertContent = $('#failedTicket').find('.alert').html();
 		contentHTML = alertContent;
 		$.niftyNoty({
 			type: "danger",

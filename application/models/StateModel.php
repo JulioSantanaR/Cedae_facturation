@@ -9,6 +9,7 @@
 		function getAllStates()
 		{
 			$query = $this->db->query('CALL sps_estado()');
+			mysqli_next_result($this->db->conn_id);
 			return $query->result();
 		}
 	}

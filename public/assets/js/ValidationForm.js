@@ -40,20 +40,19 @@ function newAjaxAsync(url, parameter, successCallback, errorCallback, tabindex, 
     $.ajax({
         type: "POST",
         url: url,
-        data: JSON.stringify(parameters),
-        contentType: "application/json; charset=utf-8",
+        data: parameters,
+        ContentType: "application/json; charset=utf-8",
         dataType: "json",
         async: true,
         error: function (request, status, error) {
             alert("error");
         },
-        success: function (msg) {
-            obj = msg.d;
-            if (msg.d.Status == 1) {
+        success: function (data) {
+            obj = data;
+            if (obj.status == 1) {
                 if (!successCallback(obj)) {
                     val = false;
-                    $.unblockUI();
-                    
+                    $.unblockUI();                    
                 } else {
                     val = true;
                     $.unblockUI();
@@ -66,8 +65,6 @@ function newAjaxAsync(url, parameter, successCallback, errorCallback, tabindex, 
                 $.unblockUI();
                 val = errorCallback(obj);
             }
-               
-
         },
         beforeSend: function () {
             Block();
