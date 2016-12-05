@@ -35,7 +35,7 @@
 			onNext: function (tab, navigation, index) {
 				var validatorObj = $('#facturacion-tab' + index).data('bootstrapValidator');
 				tabsbool = false;
-				validarCOnusltas = false;
+				validarConsultas = false;
 				messagebool = false;
 				if (index == 3) {
 					tabsbool = true;
@@ -75,7 +75,7 @@
 							$("#rfcprev").text($.trim($("#rfc2").val()));
 							$("#razonprev").text($.trim($("#razon").val()));
                             $("#paisprev").text($.trim($("#pais").val()));
-                            $("#estadoprev").text($.trim($("#<%=estado.ClientID%> option:selected").text()));
+                            $("#estadoprev").text($.trim($("#estado option:selected").text()));
                             $("#municipioprev").text($.trim($("#municipio").val()));
                             $("#coloniaprev").text($.trim($("#colonia").val()));
                             $("#calleprev").text($.trim($("#calle").val()));
@@ -83,17 +83,17 @@
                             $("#noexternoprev").text($.trim($("#noexterno").val()));
                             $("#nointernoprev").text($.trim($("#nointerno").val()));
                             $("#correoprev").text($.trim($("#correo").val()));
-                            validarCOnusltas = true;
+                            validarConsultas = true;
 						break;
 						case 3:
 							messagebool = true;
-							var ticketsParameter = ticketsTodos + "";
+							//var ticketsParameter = ticketsTodos + "";
 							parameters = {
-								sucursal: $("#<%=sucursal.ClientID%> option:selected").val()
+								sucursal: $("#sucursal option:selected").val()
 								,rfc: $.trim($("#rfc2").val())
                                 , razon: $.trim($("#razon").val())
                                 , pais: "MX"
-                                , estado: $.trim($("#<%=estado.ClientID%> option:selected").val())
+                                , estado: $.trim($("#estado option:selected").val())
                                 , municipio: $.trim($("#municipio").val())
                                 , colonia: $.trim($("#colonia").val())
                                 , calle: $.trim($("#calle").val())
@@ -101,9 +101,9 @@
                                 , noexterno: $.trim($("#noexterno").val())
                                 , nointerno: $.trim($("#nointerno").val())
                                 , correo: $.trim($("#correo").val())
-                                , tickets: ticketsParameter
+                              //  , tickets: ticketsParameter
 							};
-                            newAjaxAsync('<%= ResolveUrl("~/main/index.aspx/Facturar") %>', parameters, facturado, modalText, 3, 'facturacion-wz');
+                            //newAjaxAsync('<%= ResolveUrl("~/main/index.aspx/Facturar") %>', parameters, facturado, modalText, 3, 'facturacion-wz');
 						break;
                         default:
                     }
@@ -144,15 +144,18 @@
 			SaveClientData(0);
 		});
 
-		function SaveClientData(val) {
+		//Guardar la información del Cliente o en su defecto actualizarla
+		function SaveClientData(val) 
+		{
 			var validatorObj = $('#facturacion-tab2').data('bootstrapValidator');
 			validatorObj.validate();
-			if (validatorObj.isValid()) {
+			if (validatorObj.isValid()) 
+			{
 				parameters = {
 					rfc: $("#rfc2").val()
                     , razon: $("#razon").val()
                     , pais: $("#pais").val()
-                    , estado: $("#<%=estado.ClientID%> option:selected").val()
+                    , estado: $("#estado option:selected").val()
                     , municipio: $("#municipio").val()
                     , colonia: $("#colonia").val()
                     , calle: $("#calle").val()
@@ -161,14 +164,16 @@
                     , nointerno: $("#nointerno").val()
 					, correo: $("#correo").val()
 				};
-				newAjaxAsync('<%= ResolveUrl("~/main/index.aspx/AddClient") %>', parameters, modalTextOK, modalText, val, 'facturacion-wz')
+				newAjaxAsync('<?php echo base_url("index.php/Client/AddClient"); ?>', parameters, modalTextOK, modalText, val, 'facturacion-wz')
             }
-            else {
+            else 
+			{
 				alertFields();
 			}
 		}
 
-		function alertFields() {
+		function alertFields() 
+		{
 			alertContent = $('#alertfield').find('.alert').html();
 			contentHTML = alertContent;
 			$.niftyNoty({
@@ -185,20 +190,20 @@
 			try 
 			{
 				$("#rfc2").val($.trim($("#rfc").val().toUpperCase()));
-				/*
-                $("#razon").val($.trim(obj.Object[0].client.razonsocial));
+                $("#razon").val($.trim(obj.client.razonsocial));
                 $("#pais").val($.trim("México"));
-                if (obj.Object[0].client.estado == null)
-					$('#<%=estado.ClientID%>').selectpicker('val', "AGS");
+                if (obj.client.estado == null)
+					$('#estado').selectpicker('val', "AGS");
 				else
-					$('#<%=estado.ClientID%>').selectpicker('val', obj.Object[0].client.estado);
-				$("#municipio").val($.trim(obj.Object[0].client.municipio));
-                $("#colonia").val($.trim(obj.Object[0].client.colonia));
-                $("#calle").val($.trim(obj.Object[0].client.calle));
-                $("#cp").val($.trim(obj.Object[0].client.cp));
-                $("#noexterno").val($.trim(obj.Object[0].client.noexterno));
-                $("#nointerno").val($.trim(obj.Object[0].client.nointerno));
-                $("#correo").val($.trim(obj.Object[0].client.email));
+					$('#estado').selectpicker('val', obj.client.estado);
+				$("#municipio").val($.trim(obj.client.municipio));
+                $("#colonia").val($.trim(obj.client.colonia));
+                $("#calle").val($.trim(obj.client.calle));
+                $("#cp").val($.trim(obj.client.cp));
+                $("#noexterno").val($.trim(obj.client.noexterno));
+                $("#nointerno").val($.trim(obj.client.nointerno));
+                $("#correo").val($.trim(obj.client.email));
+				/*
                 $("#tbl_items tbody").html(obj.Body);
                 totalsum = 0;
                 for (var i = 0; i < obj.Object[0].ticket.length; i++) {
@@ -214,7 +219,8 @@
 			}
 		}
 
-		function modalText(obj) {
+		function modalText(obj) 
+		{
 			textomodal = $('#modalok').html();
 			textomodal = textomodal.replace('style="display:none;"', '').replace("[Texto]", obj.Message)
 			bootbox.dialog({
@@ -229,7 +235,8 @@
 			return false;
 		}
 
-		function modalTextOK(obj) {
+		function modalTextOK(obj) 
+		{
 			textomodal = $('#modalok').html();
 			textomodal = textomodal.replace('style="display:none;"', '').replace("[Texto]", obj.Message)
 			bootbox.dialog({
@@ -348,12 +355,15 @@
 		var table = tr.parentNode;
 		table.removeChild(tr);
 		ticketexistintable = false;
-		$("#myTable tbody tr").each(function (e, f, d) {
+		$("#myTable tbody tr").each(function (e, f, d) 
+		{
 			ticketexistintable = true;
 		});
 		if (!ticketexistintable)
+		{
 			$("#rfc").removeAttr('disabled');
 			$("#sucursal").prop('disabled', false);
+		}
 	}
 
 	//Se facturó correctamente

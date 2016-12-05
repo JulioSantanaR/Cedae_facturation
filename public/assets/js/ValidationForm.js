@@ -4,8 +4,8 @@
     $.ajax({
         type: "POST",
         url: url,
-        data: JSON.stringify(parameters),
-        contentType: "application/json; charset=utf-8",
+        data: parameters,
+        ContentType: "application/json; charset=utf-8",
         dataType: "json",
         async: false,
         error: function (request, status, error) {
@@ -47,13 +47,18 @@ function newAjaxAsync(url, parameter, successCallback, errorCallback, tabindex, 
         error: function (request, status, error) {
             alert("error");
         },
-        success: function (data) {
+        success: function (data) 
+		{
             obj = data;
-            if (obj.status == 1) {
-                if (!successCallback(obj)) {
+            if (obj.status == 1) 
+			{
+                if (!successCallback(obj)) 
+				{
                     val = false;
                     $.unblockUI();                    
-                } else {
+                } 
+				else 
+				{
                     val = true;
                     $.unblockUI();
                     if (tabindex != 0 && val == true)
@@ -222,19 +227,24 @@ $('#facturacion-tab2')
         }
     });
 
-function cpRegex(CP) {
+function cpRegex(CP) 
+{
     var regex = new RegExp(/^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$/);
-    if (!regex.test(CP)) {
+    if (!regex.test(CP)) 
+	{
         return false;
     }
     return true;
 }
 
-function rfcregex(RFC) {
+function rfcregex(RFC) 
+{
     RFC = $.trim(RFC).toUpperCase();
-    if (RFC != "XEXX010101000") {
+    if (RFC != "XEXX010101000") 
+	{
         var regex = new RegExp(/^([A-Z|a-z|&]{3}\d{2}((0[1-9]|1[012])(0[1-9]|1\d|2[0-9])|(0[13456789]|1[012])(29|30)|(0[13578]|1[02])31)|([02468][048]|[13579][26])0229)(\w{2})([A|a|0-9]{1})$|^([A-Z|a-z]{4}\d{2}((0[1-9]|1[012])(0[1-9]|1\d|2[0-8])|(0[13456789]|1[012])(29|30)|(0[13578]|1[02])31)|([02468][048]|[13579][26])0229)((\w{2})([A|a|0-9]{1})){0,3}$/);
-        if (!regex.test(RFC)) {
+        if (!regex.test(RFC)) 
+		{
             return false;
         }
     }
