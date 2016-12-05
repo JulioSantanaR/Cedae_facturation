@@ -24,26 +24,49 @@
 			   'email' => ''
 			);
 			$clientObj = (object) $clientModel;
-			$listClient = $this->ClientModel->GetClient($rfc);
-			if(count($listClient) > 0)
+			try
 			{
-				$clientObj->razonsocial = $listClient[0]->razonsocial;
-				$clientObj->pais = $listClient[0]->pais;
-				$clientObj->estado = $listClient[0]->estado;
-				$clientObj->municipio = $listClient[0]->municipio;
-				$clientObj->colonia = $listClient[0]->colonia;
-				$clientObj->calle = $listClient[0]->calle;
-				$clientObj->noexterno = $listClient[0]->noexterno;
-				$clientObj->nointerno = $listClient[0]->nointerno;
-				$clientObj->cp = $listClient[0]->cp;
-				$clientObj->email = $listClient[0]->email;
-				$data['client'] = $clientObj;
+				$listClient = $this->ClientModel->GetClient($rfc);
+				$listTickets = $this->TicketModel->GetTickets($tickets);
+				//Recorremos la lista de productos encontrados en el Ticket para mostrarlos en la vista previa, antes de facturar
+				$table='';
+				for($i=0; $i < count($listTickets); $i++)
+				{
+					$table .= 
+					'<tr>
+						<td>'.$listTickets[$i]->nombre.'</td>
+						<td>'.$listTickets[$i]->cantidad.'</td>
+						<td>'.$listTickets[$i]->total.'</td>
+					</tr>';
+				}
+				$data['Body'] = $table;
+				$data['ID'] = $tickets;
+				$data['ticket'] = $listTickets;
 				$data['status'] = true;
+				//Revisamos si se encontró el cliente en la BD de otro modo se devuelve el objeto vacio
+				if(count($listClient) > 0)
+				{
+					$clientObj->razonsocial = $listClient[0]->razonsocial;
+					$clientObj->pais = $listClient[0]->pais;
+					$clientObj->estado = $listClient[0]->estado;
+					$clientObj->municipio = $listClient[0]->municipio;
+					$clientObj->colonia = $listClient[0]->colonia;
+					$clientObj->calle = $listClient[0]->calle;
+					$clientObj->noexterno = $listClient[0]->noexterno;
+					$clientObj->nointerno = $listClient[0]->nointerno;
+					$clientObj->cp = $listClient[0]->cp;
+					$clientObj->email = $listClient[0]->email;
+					$data['client'] = $clientObj;
+				}
+				else
+				{
+					$data['client'] = $clientObj;
+				}
 			}
-			else
+			catch (Exception $e) 
 			{
-				$data['client'] = $clientObj;
-				$data['status'] = true;
+				$data['status'] = "Exception";
+				$data['message'] = $e->getMessage();				
 			}
 			$return['data'] = $data;
 			echo json_encode($return['data']);

@@ -32,5 +32,15 @@
 			$query = $this->db->query($sp,$params);
 			return $query->result();
 		}
+		
+		function GetTickets($numberTickets)
+		{
+			$sp = "CALL sps_items (?)";
+			$params = array (
+				'PARAM_1' => $numberTickets
+			);
+			$query = $this->db->query($sp,$params);
+			return $query->result();
+		}
 	}
 ?>

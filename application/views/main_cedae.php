@@ -26,7 +26,7 @@
                 <!--Brand-->
                 <!--================================-->
                 <div class="navbar-header" style="height: 60px; background: #355681;">
-                    <a href="#" style="height: 60px; background: #355681;" class="navbar-brand">
+                    <a href="<?php echo base_url();?>index.php/main_cedae" style="height: 60px; background: #355681;" class="navbar-brand">
                         <img src="public/assets/img/logocedae.png" alt="CEDAE" style="height: 60px; float: left;">
                         <div class="brand-title" style="height: 60px;">
                             <span style="height: 60px;" class="brand-text">CEDAE</span>

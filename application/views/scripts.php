@@ -203,15 +203,13 @@
                 $("#noexterno").val($.trim(obj.client.noexterno));
                 $("#nointerno").val($.trim(obj.client.nointerno));
                 $("#correo").val($.trim(obj.client.email));
-				/*
                 $("#tbl_items tbody").html(obj.Body);
                 totalsum = 0;
-                for (var i = 0; i < obj.Object[0].ticket.length; i++) {
-					totalsum += obj.Object[0].ticket[i].total;
+                for (var i = 0; i < obj.ticket.length; i++) {
+					totalsum += parseFloat(obj.ticket[i].total);
                 }
 				$("#totalfact").html("$" + ($.trim(totalsum.toFixed(2))));
 				folio = obj.ID;
-				*/
 				return true;
 			}
 			catch (e) {

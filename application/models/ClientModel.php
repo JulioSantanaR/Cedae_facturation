@@ -14,6 +14,8 @@
 			);
 			$query = $this->db->query($sp,$params);
 			$res = $query->result();
+			$query->next_result();
+			$query->free_result();
 			return $res;
 		}
 		

@@ -15,7 +15,6 @@
 			$totalTicket = $this->input->post('totalTicket');
 			$rfc = $this->input->post('rfc');
 			$listTicket = $this->TicketModel->GetInformationTicket($numberTicket,$store,$dateTicket,$totalTicket);
-			//$listTicket = $this->TicketModel->GetInformationTicket(11957,1,'2016-11-26',2750);
 			try
 			{
 				//Existe el Ticket
