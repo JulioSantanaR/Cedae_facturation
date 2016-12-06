@@ -25,18 +25,12 @@
 			$listTickets = $this->TicketModel->GetTickets($tickets);
 			
 			/********** Comienza Object Seguridad **********/
-			//Traer desde BD y cifrar contraseña con md5
+			//Traer desde BD
 			$pass = 'test123$';
-			$inputBytes = array();
-			$hashBytes = array();
-			for($i = 0; $i < strlen($pass); $i++)
-			{
-				$inputBytes[] = ord($pass[$i]);
-			}
-			
+			$hex = strtoupper($this->encryptPass($pass));
 			$seguridad = array (
 			   '0' => 'test',
-			   '1' => md5('test123$')
+			   '1' => $hex
 			);
 			$seguridadObject = (object) $seguridad;
 			
@@ -217,7 +211,6 @@
 			$data['conceptosServicioObject'] = $conceptosServicioObject;
 			$data['impuestosServicioObject'] = $impuestosServicioObject;
 			$data['respuestaWEBSERVICE'] = $respuestaProducto;
-			$data['inputBytes'] = $inputBytes;
 			$return['data'] = $data;
 			echo json_encode($return['data']);
 		}
@@ -259,6 +252,24 @@
                     break;
             }
             return $result;
+		}
+		
+		public function encryptPass($pass)
+		{
+			$passHash = md5($pass);
+			$strlen = strlen($passHash);
+			$hashedBytes = array();
+			$i = 0 ;
+			while ($i < $strlen) 
+			{
+				$pair = substr($passHash, $i, 2) ;
+				$hashedBytes[] = hexdec($pair) ;
+				$i = $i + 2 ;
+			}
+			$chars = array_map("chr", $hashedBytes);
+			$bin = join($chars);
+			$hex = bin2hex($bin);
+			return $hex;
 		}
 	}
 ?>
