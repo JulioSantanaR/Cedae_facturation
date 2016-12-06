@@ -8,7 +8,7 @@
 		}
 		
 		public function Facturar()
-		{			
+		{					
 			date_default_timezone_set('America/Mexico_City');
 			$rfc = $this->input->post('rfc');
 			$razon = $this->input->post('razon');
@@ -26,9 +26,17 @@
 			
 			/********** Comienza Object Seguridad **********/
 			//Traer desde BD y cifrar contraseña con md5
+			$pass = 'test123$';
+			$inputBytes = array();
+			$hashBytes = array();
+			for($i = 0; $i < strlen($pass); $i++)
+			{
+				$inputBytes[] = ord($pass[$i]);
+			}
+			
 			$seguridad = array (
 			   '0' => 'test',
-			   '1' => 'test123$'
+			   '1' => md5('test123$')
 			);
 			$seguridadObject = (object) $seguridad;
 			
@@ -192,6 +200,12 @@
 			
 			/********** Comienzan Peticiones al Web Service **********/
 			//Si hay productos hacemos factura de otro modo vamos al caso de facturar un servicio
+			if(count($conceptosProductoObject) > 0)
+			{
+				$servicio="http://74.50.117.161:100/WebServiceCFDI.asmx?WSDL";
+				$client = new SoapClient($servicio);
+				$respuestaProducto[] = $client->timbrarv1($seguridadObject,$comprobanteProductoObject,$emisorObject,$receptorObject,$conceptosProductoObject,$impuestosProductoObject,null);
+			}
 			
 			$data['seguridad'] = $seguridadObject;
 			$data['comprobanteProductoObject'] = $comprobanteProductoObject;			
@@ -202,8 +216,8 @@
 			$data['impuestosProductoObject'] = $impuestosProductoObject;
 			$data['conceptosServicioObject'] = $conceptosServicioObject;
 			$data['impuestosServicioObject'] = $impuestosServicioObject;
-			$data['listClient'] = $listClient;
-			$data['listTickets'] = $listTickets;
+			$data['respuestaWEBSERVICE'] = $respuestaProducto;
+			$data['inputBytes'] = $inputBytes;
 			$return['data'] = $data;
 			echo json_encode($return['data']);
 		}

@@ -26,4 +26,5 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-workspace
 *.sublime-project
 
-RetailTerrabit-Facturacion/RODHE.Facturacion/RODHE.Facturacion.v11.suo
+/RetailTerrabit-Facturacion/RODHE.Facturacion/RODHE.Facturacion.v11.suo
+/RetailTerrabit-Facturacion

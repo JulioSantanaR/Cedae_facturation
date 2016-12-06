@@ -28,3 +28,9 @@ C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RO
 C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Conexion\obj\Debug\RODHE.Conexion.csprojResolveAssemblyReference.cache
 C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Conexion\obj\Debug\RODHE.Conexion.dll
 C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Conexion\obj\Debug\RODHE.Conexion.pdb
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Conexion\bin\Debug\RODHE.Conexion.dll.config
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Conexion\bin\Debug\RODHE.Conexion.dll
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Conexion\bin\Debug\RODHE.Conexion.pdb
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Conexion\obj\Debug\RODHE.Conexion.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Conexion\obj\Debug\RODHE.Conexion.dll
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Conexion\obj\Debug\RODHE.Conexion.pdb

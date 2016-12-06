@@ -28,3 +28,10 @@ C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RO
 C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\obj\Debug\RODHE.Facturacion.DAL.csprojResolveAssemblyReference.cache
 C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\obj\Debug\SCFacturacion.DAL.dll
 C:\Users\julio.santana\Documents\Cedae_facturation\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\obj\Debug\SCFacturacion.DAL.pdb
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\bin\Debug\SCFacturacion.DAL.dll
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\bin\Debug\SCFacturacion.DAL.pdb
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\bin\Debug\RODHE.Conexion.dll
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\bin\Debug\RODHE.Conexion.pdb
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\obj\Debug\RODHE.Facturacion.DAL.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\obj\Debug\SCFacturacion.DAL.dll
+C:\xampp\htdocs\CedaeFacturacion\RetailTerrabit-Facturacion\RODHE.Facturacion\SCFacturacion.DAL\obj\Debug\SCFacturacion.DAL.pdb
