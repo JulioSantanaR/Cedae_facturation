@@ -87,7 +87,7 @@
 						break;
 						case 3:
 							messagebool = true;
-							//var ticketsParameter = ticketsTodos + "";
+							var ticketsParameter = ticketsTodos + "";
 							parameters = {
 								sucursal: $("#sucursal option:selected").val()
 								,rfc: $.trim($("#rfc2").val())
@@ -101,9 +101,9 @@
                                 , noexterno: $.trim($("#noexterno").val())
                                 , nointerno: $.trim($("#nointerno").val())
                                 , correo: $.trim($("#correo").val())
-                              //  , tickets: ticketsParameter
+                                , tickets: ticketsParameter
 							};
-                            //newAjaxAsync('<%= ResolveUrl("~/main/index.aspx/Facturar") %>', parameters, facturado, modalText, 3, 'facturacion-wz');
+                            newAjaxAsync('<?php echo base_url("index.php/Factura/Facturar"); ?>', parameters, facturado, modalText, 3, 'facturacion-wz');
 						break;
                         default:
                     }

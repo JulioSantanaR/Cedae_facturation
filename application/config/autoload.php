@@ -132,6 +132,6 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('BranchModel','StateModel','TicketModel','ClientModel');
+$autoload['model'] = array('BranchModel','StateModel','TicketModel','ClientModel','FacturaModel');
 
 $autoload['helper'] = array('url');
