@@ -9,6 +9,7 @@
 		
 		public function Facturar()
 		{			
+			date_default_timezone_set('America/Mexico_City');
 			$rfc = $this->input->post('rfc');
 			$razon = $this->input->post('razon');
 			$pais = $this->input->post('pais');
@@ -71,18 +72,18 @@
 			//Object Comprobante Producto
 			if($descuentoProducto > 0)
 			{
-				$haveDiscount = 'Descuento producto';
+				$haveDiscountProduct = 'Descuento producto';
 			}
 			else
 			{
-				$haveDiscount = '';
+				$haveDiscountProduct = '';
 			}
 			$formaPagoProducto = rtrim($formaPagoProducto, ',');
 			$comprobanteProducto = array (
 			   '0' => date("Y-m-d H:i:s"),
 			   '1' => '30 días',
 			   '2' => $descuentoProducto,
-			   '3' => $haveDiscount,
+			   '3' => $haveDiscountProduct,
 			   '4' => $formaPagoProducto,
 			   '5' => '1',
 			   '6' => 'MXN',
@@ -91,8 +92,116 @@
 			);
 			$comprobanteProductoObject = (object) $comprobanteProducto;
 			
+			//Object Comprobante Servicio
+			if($descuentoServicio > 0)
+			{
+				$haveDiscountService = 'Descuento servicio';
+			}
+			else
+			{
+				$haveDiscountService = '';
+			}
+			$formaPagoServicio = rtrim($formaPagoServicio, ',');
+			$comprobanteServicio = array (
+			   '0' => date("Y-m-d H:i:s"),
+			   '1' => '30 días',
+			   '2' => $descuentoProducto,
+			   '3' => $haveDiscountService,
+			   '4' => $formaPagoServicio,
+			   '5' => '1',
+			   '6' => 'MXN',
+			   '7' => 'CDMX',
+			   '8' => ''
+			);
+			$comprobanteServicioObject = (object) $comprobanteServicio;
+			
+			/********** Comienza Object Receptor **********/
+			foreach($listClient as $client)
+			{
+				$receptor = array (
+					'0' => $client->rfc,
+					'1' => $client->razonsocial,
+					'2' => $client->calle,
+					'3' => $client->noexterno,
+					'4' => $client->nointerno,
+					'5' => $client->colonia,
+					'6' => $client->municipio,
+					'7' => '',
+					'8' => $client->estado,
+					'9' => $client->pais,
+					'10' => $client->cp
+				);
+			}
+			$receptorObject = (object) $receptor;
+			
+			/********** Comienza Object Emisor **********/
+			foreach($listTickets as $ticket)
+			{
+				$emisor = array (
+					'0' => $ticket->idsucursal
+				);
+			}
+			$emisorObject = (object) $emisor;
+			
+			/********** Comienza Object Conceptos e Impuestos **********/
+			foreach($listTickets as $ticket)
+			{
+				//Productos
+				if($ticket->isService == 0)
+				{
+					//Conceptos Producto
+					$conceptosProducto[] = array (
+						'0' => $ticket->cantidad,
+						'1' => 'Producto',
+						'2' => $ticket->item_id,
+						'3' => $ticket->nombre,
+						'4' => $ticket->totalitem,
+						'5' => $ticket->totalSinIVA
+					);					
+					//Impuestos Producto
+					$impuestosProducto[] = array (
+						'0' => 'IVA',
+						'1' => $ticket->IVA,
+						'2' => $ticket->totalItemsIVA
+					);
+				}
+				//Servicios
+				else
+				{
+					//Conceptos Servicios
+					$conceptosServicio[] = array (
+						'0' => $ticket->cantidad,
+						'1' => 'Servicio',
+						'2' => $ticket->item_id,
+						'3' => $ticket->nombre,
+						'4' => $ticket->totalitem,
+						'5' => $ticket->totalSinIVA
+					);
+					//Impuestos Producto
+					$impuestosServicio[] = array (
+						'0' => 'IVA',
+						'1' => $ticket->IVA,
+						'2' => $ticket->totalItemsIVA
+					);
+				}
+			}
+			$conceptosProductoObject = (object) $conceptosProducto;
+			$impuestosProductoObject = (object) $impuestosProducto;
+			$conceptosServicioObject = (object) $conceptosServicio;
+			$impuestosServicioObject = (object) $impuestosServicio;
+			
+			/********** Comienzan Peticiones al Web Service **********/
+			//Si hay productos hacemos factura de otro modo vamos al caso de facturar un servicio
+			
 			$data['seguridad'] = $seguridadObject;
 			$data['comprobanteProductoObject'] = $comprobanteProductoObject;			
+			$data['comprobanteServicioObject'] = $comprobanteServicioObject;		
+			$data['receptorObject'] = $receptorObject;
+			$data['emisorObject'] = $emisorObject;
+			$data['conceptosProductoObject'] = $conceptosProductoObject;
+			$data['impuestosProductoObject'] = $impuestosProductoObject;
+			$data['conceptosServicioObject'] = $conceptosServicioObject;
+			$data['impuestosServicioObject'] = $impuestosServicioObject;
 			$data['listClient'] = $listClient;
 			$data['listTickets'] = $listTickets;
 			$return['data'] = $data;
