@@ -28,11 +28,11 @@
 			//Traer desde BD
 			$pass = 'test123$';
 			$hex = strtoupper($this->encryptPass($pass));
-			$seguridad = array (
+			$Seguridad = array (
 			   '0' => 'test',
 			   '1' => $hex
 			);
-			$seguridadObject = (object) $seguridad;
+			$Seguridad = (object) $Seguridad;
 			
 			/********** Comienza Object Comprobante **********/
 			$descuentoProducto = 0;
@@ -195,13 +195,22 @@
 			/********** Comienzan Peticiones al Web Service **********/
 			//Si hay productos hacemos factura de otro modo vamos al caso de facturar un servicio
 			if(count($conceptosProductoObject) > 0)
-			{
+			{	
+				$params = array(
+					'Seguridad'	=> $Seguridad,
+					'Comprobante' => $comprobanteProductoObject,
+					'Emisor' => $emisorObject,
+					'Receptor' => $receptorObject,
+					'Conceptos' => $conceptosProductoObject,
+					'ImpuestosTrasladados' => $impuestosProductoObject,
+					'ImpuestosRetenidos' => null
+				);
 				$servicio="http://74.50.117.161:100/WebServiceCFDI.asmx?WSDL";
 				$client = new SoapClient($servicio);
-				$respuestaProducto[] = $client->timbrarv1($seguridadObject,$comprobanteProductoObject,$emisorObject,$receptorObject,$conceptosProductoObject,$impuestosProductoObject,null);
+				$respuestaProducto[] = $client->timbrarv1($params);
 			}
 			
-			$data['seguridad'] = $seguridadObject;
+			$data['Seguridad'] = $Seguridad;
 			$data['comprobanteProductoObject'] = $comprobanteProductoObject;			
 			$data['comprobanteServicioObject'] = $comprobanteServicioObject;		
 			$data['receptorObject'] = $receptorObject;
