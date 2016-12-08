@@ -5,6 +5,25 @@
 		{
 			parent::__construct();
 			$this->load->database();
+			$this->load->library("Nusoap_lib");
+		}
+		
+		public function encryptPass($pass)
+		{
+			$passHash = md5($pass);
+			$strlen = strlen($passHash);
+			$hashedBytes = array();
+			$i = 0 ;
+			while ($i < $strlen) 
+			{
+				$pair = substr($passHash, $i, 2) ;
+				$hashedBytes[] = hexdec($pair) ;
+				$i = $i + 2 ;
+			}
+			$chars = array_map("chr", $hashedBytes);
+			$bin = join($chars);
+			$hex = bin2hex($bin);
+			return $hex;
 		}
 		
 		public function Facturar()
@@ -26,13 +45,42 @@
 			
 			/********** Comienza Object Seguridad **********/
 			//Traer desde BD
+			$user = 'test';
 			$pass = 'test123$';
 			$hex = strtoupper($this->encryptPass($pass));
 			$Seguridad = array (
-			   '0' => 'test',
+			   '0' => $user,
 			   '1' => $hex
 			);
 			$Seguridad = (object) $Seguridad;
+			
+			/*
+			Para probar sólo el Controller con Nusoap_lib
+			$params = array(
+					'Seguridad'	=> $Seguridad,
+					'Comprobante' => null,
+					'Emisor' => null,
+					'Receptor' => null,
+					'Conceptos' => null,
+					'ImpuestosTrasladados' => null,
+					'ImpuestosRetenidos' => null
+			);
+			$servicio="http://74.50.117.161:100/WebServiceCFDI.asmx?WSDL";
+			$client = new nusoap_client($servicio,'WSDL');
+			$error = $client->getError();
+			if ($error) {
+				die("client construction error: {$error}\n");
+			}
+			$answer = $client->call('timbrarv1',$params, '', '', false, true);
+			$error = $client->getError();
+			if ($error) {
+				print_r($client->response);
+				print_r($client->getDebug());
+				die();
+			 }
+			print_r($answer);		
+			echo die();
+			*/
 			
 			/********** Comienza Object Comprobante **********/
 			$descuentoProducto = 0;
@@ -210,6 +258,7 @@
 				$respuestaProducto[] = $client->timbrarv1($params);
 			}
 			
+			/*
 			$data['Seguridad'] = $Seguridad;
 			$data['comprobanteProductoObject'] = $comprobanteProductoObject;			
 			$data['comprobanteServicioObject'] = $comprobanteServicioObject;		
@@ -220,6 +269,8 @@
 			$data['conceptosServicioObject'] = $conceptosServicioObject;
 			$data['impuestosServicioObject'] = $impuestosServicioObject;
 			$data['respuestaWEBSERVICE'] = $respuestaProducto;
+			*/
+			$data['params'] = $params;
 			$return['data'] = $data;
 			echo json_encode($return['data']);
 		}
@@ -261,24 +312,6 @@
                     break;
             }
             return $result;
-		}
-		
-		public function encryptPass($pass)
-		{
-			$passHash = md5($pass);
-			$strlen = strlen($passHash);
-			$hashedBytes = array();
-			$i = 0 ;
-			while ($i < $strlen) 
-			{
-				$pair = substr($passHash, $i, 2) ;
-				$hashedBytes[] = hexdec($pair) ;
-				$i = $i + 2 ;
-			}
-			$chars = array_map("chr", $hashedBytes);
-			$bin = join($chars);
-			$hex = bin2hex($bin);
-			return $hex;
 		}
 	}
 ?>
